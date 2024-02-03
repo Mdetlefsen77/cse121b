@@ -1,3 +1,4 @@
+'use strict';
 /* LESSON 3 - Programming Tasks */
 
 /* Profile Object  */
@@ -68,14 +69,11 @@ myProject.hobbies.forEach(function (hobby) {
 })
 
 /* Places Lived DataList */
-
-/* I create a function that will display the layout */
-const placesLivedLayout = (placesLivedArray) => {
-    const placesLength = placesLivedArray.map((PL) =>
-        `<dt><b>${PL.place}</b></dt>
-        <dd><sup><big>${PL.length}</big></sup></dd>`
-    );
-    document.querySelector('#places-lived').innerHTML = placesLength.join("");
-};
-/* I instantiate the function that displays the layout */
-placesLivedLayout(myProject.placesLived);
+myProject.placesLived.forEach(function (placesLivedArray) {
+    let dt = document.createElement('dt');
+    let dd = document.createElement('dd');
+    dt.textContent = placesLivedArray.place;
+    dd.textContent = placesLivedArray.length;
+    document.querySelector('#places-lived').appendChild(dt)
+    document.querySelector('#places-lived').appendChild(dd)
+})
