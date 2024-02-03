@@ -19,7 +19,7 @@ function subtract(number1, number2) {
     return number1 - number2;
 }
 
-function subtractNumbers() {
+const subtractNumbers = function () {
     const subtractNumber1 = Number(document.querySelector("#subtract1").value);
     const subtractNumber2 = Number(document.querySelector("#subtract2").value);
     document.querySelector('#difference').value = subtract(subtractNumber1, subtractNumber2);
@@ -31,7 +31,7 @@ function multiply(number1, number2) {
     return number1 * number2;
 }
 
-function multiplyNumbers() {
+const multiplyNumbers = () => {
     const multiplyNumber1 = Number(document.querySelector("#factor1").value);
     const multiplyNumber2 = Number(document.querySelector("#factor1").value);
     document.querySelector('#product').value = multiply(multiplyNumber1, multiplyNumber2);
