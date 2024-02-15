@@ -33,6 +33,7 @@ async function getTemples() {
     if (templeList.length > 0) {
         displayTemples(templeList);
     }
+
 }
 
 /* reset Function */
