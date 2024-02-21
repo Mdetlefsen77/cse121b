@@ -1,7 +1,8 @@
 /* W05: Programming Tasks */
 
 /* Declare and initialize global variables */
-const URL = 'https://byui-cse.github.io/cse121b-course/week05/temples.json';
+
+const URL = "https://byui-cse.github.io/cse121b-ww-course/resources/temples.json";
 const templesElement = document.querySelector('#temples');
 let templeList = [];
 /* async displayTemples Function */
@@ -49,7 +50,7 @@ function filterTemples(temples) {
         case 'utah':
             displayTemples(temples.filter(temple => temple.location.includes('Utah')));
             break;
-        case 'nonutah':
+        case 'notutah':
             displayTemples(temples.filter(temple => !temple.location.includes('Utah')));
             break;
         case 'older':
